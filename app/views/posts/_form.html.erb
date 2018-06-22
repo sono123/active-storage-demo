@@ -13,20 +13,20 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :files %>
-    <%= form.file_field :files, multiple: true, class: "form-control" %>
+    <%= form.file_field :files, multiple: true, direct_upload: true, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" style="margin-top: 2rem;">
+    <%= form.submit class: 'btn btn-primary'%>
   </div>
 <% end %>
